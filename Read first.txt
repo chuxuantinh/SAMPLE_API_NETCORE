@@ -1,0 +1,15 @@
+Database access with Entity Framework.
+
+To establish the entities through classes and the connection of the database, we can use the Database First approach of the Entity Framework, which allows us to scaffold from the database to the project, that is, generate classes automatically according to the entities established in the database and the connection in the project.
+Step 1:
+For this purpose, it's necessary to install three NuGet packages,
+
+Microsoft.EntityFrameworkCore.Design
+Microsoft.EntityFrameworkCore.Tools
+MySql.EntityFrameworkCore
+Microsoft.EntityFrameworkCore.SQLServer
+
+
+Step 2:
+dotnet ef dbcontext scaffold "Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=LAB-HUB" Microsoft.EntityFrameworkCore.SqlServer or
+Scaffold-DbContext "server=DESKTOP-CCFGULQ\CT;user=sa;password=chu...;database=LAB-HUB-2022" Microsoft.EntityFrameworkCore.SQLServer -OutputDir Entities -f
